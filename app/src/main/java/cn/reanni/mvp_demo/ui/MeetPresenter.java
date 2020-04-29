@@ -1,6 +1,7 @@
 package cn.reanni.mvp_demo.ui;
 
 import android.accounts.NetworkErrorException;
+import android.annotation.SuppressLint;
 
 import java.util.Random;
 
@@ -11,6 +12,7 @@ import cn.reanni.mvp_demo.bean.Host;
 import cn.reanni.mvp_demo.bean.Jury;
 import io.reactivex.Observable;
 
+@SuppressLint("SetTextI18n")
 public class MeetPresenter extends LayoutPresenter<MainActivity> {
 
     Random r = new Random();

@@ -1,5 +1,6 @@
 package cn.reanni.mvp_demo.ui;
 
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import cn.reanni.mvp_demo.bean.Host;
 import static cn.reanni.mvp_demo.ui.MeetPresenter.GET_GUEST;
 import static cn.reanni.mvp_demo.ui.MeetPresenter.GET_HOST;
 
+@SuppressLint("SetTextI18n")
 public class MeetingActivity extends LayoutActivity<MeetPresenter> {
 
     // 标题栏跟共同标题栏差异太大无法共用

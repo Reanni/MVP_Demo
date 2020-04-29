@@ -15,6 +15,7 @@ import static cn.reanni.mvp_demo.ui.MeetPresenter.GET_HOST;
 
 public class MeetingActivity extends LayoutActivity<MeetPresenter> {
 
+    // 标题栏跟共同标题栏差异太大无法共用
     public MeetingActivity() {
         super(R.layout.activity_meeting);
     }

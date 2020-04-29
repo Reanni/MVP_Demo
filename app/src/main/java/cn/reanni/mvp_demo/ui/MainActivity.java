@@ -8,6 +8,7 @@ import cn.reanni.mvp_demo.base.LayoutActivity;
 
 public class MainActivity extends LayoutActivity implements View.OnClickListener {
 
+    // 使用公共的标题栏
     public MainActivity() {
         super(R.layout.common_title_default, R.layout.activity_main);
     }

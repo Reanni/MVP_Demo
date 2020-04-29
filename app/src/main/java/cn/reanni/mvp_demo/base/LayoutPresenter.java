@@ -16,15 +16,15 @@ public class LayoutPresenter<V extends IView> {
 
     private WeakReference<V> mWeakView;
 
-    public void onAttachView(V view) {
+    void onAttachView(V view) {
         mWeakView = new WeakReference<>(view);
     }
 
-    public void onDetachView() {
+    void onDetachView() {
         mWeakView.clear();
     }
 
-    protected V view() {
+    private V view() {
         return mWeakView.get();
     }
 
@@ -32,7 +32,7 @@ public class LayoutPresenter<V extends IView> {
         doApi(apiResult, DEFAULT);
     }
 
-    public <T extends BaseBean> void doApi(Observable<T> apiResult, final String resultType) {
+    protected <T extends BaseBean> void doApi(Observable<T> apiResult, final String resultType) {
         apiResult
                 .subscribeOn(Schedulers.io())
                 .doOnNext(new Consumer<T>() {

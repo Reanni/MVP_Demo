@@ -34,9 +34,6 @@ public class MeetingActivity extends LayoutActivity<MeetPresenter> {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_1:
-               /* int i = r.nextInt(10);
-                String sex = (i % 2 == 1) ? "男" : "女";
-                presenter.getGuest(sex);*/
                 presenter.getGuest(r.nextInt(10) % 2 == 0 ? "男" : "女");
                 break;
             case R.id.bt_2:

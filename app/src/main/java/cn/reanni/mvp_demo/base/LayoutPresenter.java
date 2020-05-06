@@ -10,6 +10,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
+@SuppressWarnings({"unused", "unchecked"})
 public class LayoutPresenter<V extends IView> {
 
     private final static String DEFAULT = "default";

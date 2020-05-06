@@ -1,9 +1,10 @@
 package cn.reanni.mvp_demo.bean;
 
+@SuppressWarnings("unused")
 public class BaseBean<T> {
-    int state;
-    String message;
-    T data;
+    private int state;
+    private String message;
+    private T data;
 
     public BaseBean(int state, String message, T data) {
         this.state = state;

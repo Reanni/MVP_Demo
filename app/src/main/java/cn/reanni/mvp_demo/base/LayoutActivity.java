@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
 
 import cn.reanni.mvp_demo.R;
 
+@SuppressWarnings({"ConstantConditions", "unchecked"})
 public abstract class LayoutActivity<P extends LayoutPresenter> extends AppCompatActivity implements IView {
 
     public LayoutActivity(int contentLayoutId) {
@@ -32,7 +33,7 @@ public abstract class LayoutActivity<P extends LayoutPresenter> extends AppCompa
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /**初始化布局*/
+        /*初始化布局*/
         if (titleLayoutId != 0) {
             ViewStub titleStub = findViewById(R.id.title_layout_stub);
             titleStub.setLayoutResource(titleLayoutId);
@@ -41,8 +42,8 @@ public abstract class LayoutActivity<P extends LayoutPresenter> extends AppCompa
             contentStub.setLayoutResource(contentLayoutId);
             contentStub.inflate();
         }
-        onInitLayout();
-        /**绑定Presenter*/
+        onInit();
+        /*绑定Presenter*/
         presenter = attachPresenter();
         if (presenter != null) presenter.onAttachView(this);
     }
@@ -56,13 +57,13 @@ public abstract class LayoutActivity<P extends LayoutPresenter> extends AppCompa
         }
     }
 
-    abstract protected void onInitLayout();
+    abstract protected void onInit();
 
     private P attachPresenter() {
         try {
             Type[] types = ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments();
-            for (int i = 0; i < types.length; i++) {
-                Class type = (Class) types[i];
+            for (Type value : types) {
+                Class type = (Class) value;
                 if (LayoutPresenter.class.isAssignableFrom(type)) {
                     return ((P) type.newInstance());
                 }

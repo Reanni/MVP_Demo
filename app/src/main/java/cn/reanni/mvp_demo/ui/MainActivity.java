@@ -14,7 +14,7 @@ public class MainActivity extends LayoutActivity implements View.OnClickListener
     }
 
     @Override
-    protected void onInitLayout() {
+    protected void onInit() {
         findViewById(R.id.tv).setOnClickListener(this);
     }
 

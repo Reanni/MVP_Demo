@@ -1,8 +1,9 @@
 package cn.reanni.mvp_demo.bean;
 
+@SuppressWarnings("unused")
 public class Guest {
-    int numb;
-    String sex;
+    private  int numb;
+    private  String sex;
 
     public Guest(int numb, String sex) {
         this.numb = numb;

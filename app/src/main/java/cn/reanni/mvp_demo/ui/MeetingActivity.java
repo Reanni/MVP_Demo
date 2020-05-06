@@ -26,7 +26,7 @@ public class MeetingActivity extends LayoutActivity<MeetPresenter> {
     Random r = new Random();
 
     @Override
-    protected void onInitLayout() {
+    protected void onInit() {
         tv_1 = findViewById(R.id.tv_1);
         tv_2 = findViewById(R.id.tv_2);
     }

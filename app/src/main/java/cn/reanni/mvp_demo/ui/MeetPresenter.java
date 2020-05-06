@@ -12,10 +12,11 @@ import cn.reanni.mvp_demo.bean.Host;
 import cn.reanni.mvp_demo.bean.Jury;
 import io.reactivex.Observable;
 
+@SuppressWarnings({"unchecked", "WeakerAccess"})
 @SuppressLint("SetTextI18n")
 public class MeetPresenter extends LayoutPresenter<MainActivity> {
 
-    Random r = new Random();
+    private Random r = new Random();
 
     final static String GET_GUEST = "GET_GUEST";
 

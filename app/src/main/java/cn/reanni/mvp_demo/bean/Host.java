@@ -1,7 +1,8 @@
 package cn.reanni.mvp_demo.bean;
 
+@SuppressWarnings("unused")
 public class Host {
-    String name;
+    private String name;
 
     public Host(String name) {
         this.name = name;

@@ -1,5 +1,8 @@
 package cn.reanni.mvp_demo.bean;
 
+/**
+ * 主持人
+ */
 @SuppressWarnings("unused")
 public class Host {
     private String name;

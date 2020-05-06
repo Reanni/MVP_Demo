@@ -1,5 +1,8 @@
 package cn.reanni.mvp_demo.bean;
 
+/**
+ * 嘉宾
+ */
 @SuppressWarnings("unused")
 public class Guest {
     private  int numb;
